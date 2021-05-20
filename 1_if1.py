@@ -19,7 +19,22 @@ def main():
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-    pass
+    def occupancy(age):
+      if age >= 3 and age <= 7:
+        return 'Вы ходите в детский сад'
+      elif age > 7 and age <= 18:
+        return 'Вы учитесь в школе'
+      elif age > 18 and age <= 24:
+        return 'Вы учитесь в ВУЗе'
+      elif age > 24 and age <= 65:
+        return 'Вы работаете'
+      else:
+        return 'Я не знаю, чем вы занимаетесь'
+    
+    print('Введите ваш возраст')
+    get_age = int(input())
+    print(occupancy(get_age))
+    
 
 if __name__ == "__main__":
-    main()
+  main()
